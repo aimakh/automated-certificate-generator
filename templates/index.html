@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated Certificate Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Automated Certificate Generator</h1>
+
+        <div id="step-1" class="step">
+            <h2>Upload Files</h2>
+            <form id="upload-form">
+                <div class="form-group">
+                    <label for="template-file">Upload Certificate Template (PNG/JPG):</label>
+                    <input type="file" id="template-file" name="template" accept=".png, .jpg, .jpeg" required>
+                </div>
+                <div class="form-group">
+                    <label for="data-file">Upload Winner Data (CSV/XLSX):</label>
+                    <input type="file" id="data-file" name="data" accept=".csv, .xlsx" required>
+                </div>
+                <button type="submit">Upload & Configure</button>
+            </form>
+            <div id="upload-status"></div>
+        </div>
+
+        <div id="step-2" class="step hidden">
+            <h2>Configure Fields</h2>
+            <div class="template-viewer">
+                <img id="certificate-template" src="" alt="Certificate Template">
+                <div id="fields-overlay"></div>
+            </div>
+            <div class="field-controls">
+                <h3>Fields to Place:</h3>
+                <div id="field-list"></div>
+                <button id="add-field-btn">Add Field</button>
+            </div>
+            <button id="generate-btn">Generate Certificates</button>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
