@@ -47,6 +47,12 @@ Built with **HTML/CSS/JavaScript** for the frontend and **Flask (Python)** for t
    git clone https://github.com/aimakh/automated-certificate-generator.git
    cd automated-certificate-generator
 
-Install Dependencies
-   git clone https://github.com/your-username/automated-certificate-generator.git
-   cd automated-certificate-generator
+
+2. **Install Dependencies**
+   Make sure you have Python 3.x installed.
+   Install all required packages using:
+   ```bash
+   pip install -r requirements.txt
+
+
+
